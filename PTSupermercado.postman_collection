@@ -1,0 +1,179 @@
+{
+  "info": {
+    "_postman_id": "d166c702-0cfd-405f-976c-b0fdcc2122ef",
+    "name": "PruebaTecnicaSupermercado",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "53309610",
+    "_collection_link": "https://go.postman.co/collection/53309610-d166c702-0cfd-405f-976c-b0fdcc2122ef?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "POST productos",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"nombre\" : \"Coca Cola 1.5L\",\r\n    \"categoria\" : \"Bebida\",\r\n    \"precio\" : 3500.5,\r\n    \"cantidad\" : 30\r\n    \r\n\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/productos",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "productos"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GET productos",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/productos",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "productos"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "POST sucursales",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"nombre\" : \"Sucursal Barrio Escuela\",\r\n    \"direccion\" : \"Leandro N. Alem 12\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/sucursales",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "sucursales"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GET sucursales",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/sucursales",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "sucursales"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "POST ventas",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"fecha\" : \"2026-04-08\",\r\n    \"estado\" : \"REGISTRADA\",\r\n    \"idSucursal\" : 1,\r\n    \"detalle\" :  [\r\n        {\r\n            \"id\" : 1,\r\n            \"nombreProd\" : \"Coca Cola 1.5L\",\r\n            \"cantProd\" : 2,\r\n            \"precio\" : 3500.5,\r\n            \"subtotal\" : 5000.0\r\n        },\r\n        {\r\n            \"id\" : 1,\r\n            \"nombreProd\" : \"Naranjas\",\r\n            \"cantProd\" : 3,\r\n            \"precio\" : 1500.5,\r\n            \"subtotal\" : 4500.0\r\n        }\r\n     ],\r\n     \"total\" : 9500.0\r\n\r\n    \r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/ventas",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "ventas"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GET ventas",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/ventas",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "ventas"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "DELETE productos",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/productos/2",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "productos",
+            "2"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
